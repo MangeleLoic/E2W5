@@ -1,7 +1,10 @@
 package epicode.D2W5.entities;
 
+import epicode.D2W5.PizzeriaConfiguration;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import java.time.LocalDateTime;
-import java.util.List;
+
 
 public class Ordine {
     private int numeroOrdine;
@@ -10,6 +13,9 @@ public class Ordine {
     private LocalDateTime oraPrenotazione;
     private Menu menu;
     private double totale;
+
+    @Autowired
+    private PizzeriaConfiguration pizzeriaConfiguration;
 
     public Ordine(Menu menu, int numeroCoperti, int numeroOrdine, LocalDateTime oraPrenotazione, Stato stato) {
         this.menu = menu;

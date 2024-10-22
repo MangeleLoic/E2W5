@@ -11,4 +11,5 @@ public class PizzeriaConfiguration {
     public double getCoperto() {
         return coperto;
     }
+
 }

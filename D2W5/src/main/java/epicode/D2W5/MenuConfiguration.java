@@ -4,7 +4,6 @@ import epicode.D2W5.entities.Bevanda;
 import epicode.D2W5.entities.Menu;
 import epicode.D2W5.entities.Pizza;
 import epicode.D2W5.entities.Topping;
-import epicode.D2W5.entities.Pizza;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -50,20 +49,30 @@ public class MenuConfiguration {
     }
     @Bean
     public Topping wurstel() {
-        return new Topping("Coca Cola", 1.50);
+        return new Topping("Wurstel", 1.50);
     }
     @Bean
-    public Menu menu() {
-        Menu menu = new Menu();
-        menu.addPizza(margherita());
-        menu.addPizza(prosciuttoFunghi());
-        menu.addPizza(quattroFormaggi());
-        menu.addBevanda(cocacola());
-        menu.addBevanda(acqua());
-        menu.addBevanda(birra());
-        menu.addTopping(salame());
-        menu.addTopping(wurstel());
-        menu.addTopping(gorgonzola());
-        return menu;
+    public Menu menu1() {
+        Menu menu1 = new Menu();
+        menu1.addPizza(margherita());
+        menu1.addPizza(prosciuttoFunghi());
+        menu1.addPizza(quattroFormaggi());
+        menu1.addBevanda(cocacola());
+        menu1.addBevanda(acqua());
+        menu1.addBevanda(birra());
+        menu1.addTopping(salame());
+        menu1.addTopping(gorgonzola());
+        menu1.addTopping(wurstel());
+        return menu1;
+    }
+    public Menu menu2() {
+        Menu menu2 = new Menu();
+        menu2.addPizza(prosciuttoFunghi());
+        menu2.addPizza(quattroFormaggi());
+        menu2.addBevanda(cocacola());
+        menu2.addBevanda(acqua());
+        menu2.addBevanda(birra());
+        menu2.addTopping(gorgonzola());
+        return menu2;
     }
 }

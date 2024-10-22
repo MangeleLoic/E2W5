@@ -7,9 +7,7 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
-@AllArgsConstructor
+
 public class Menu {
     private List<Pizza> pizze;
     private List<Bevanda> bevande;
@@ -28,6 +26,27 @@ public class Menu {
     }
     public void addTopping (Topping topping){
         this.toppings.add(topping);
+    }
+
+    public List<Bevanda> getBevande() {
+        return bevande;
+    }
+
+    public List<Pizza> getPizze() {
+        return pizze;
+    }
+
+    public List<Topping> getToppings() {
+        return toppings;
+    }
+
+    @Override
+    public String toString() {
+        return "Menu{" +
+                "bevande=" + bevande +
+                ", pizze=" + pizze +
+                ", toppings=" + toppings +
+                '}';
     }
 
     public void stampaMenu(){
